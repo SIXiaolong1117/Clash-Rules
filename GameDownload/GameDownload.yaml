@@ -1,0 +1,5 @@
+payload:
+  - DOMAIN,hw-pcdownload-aws.aki-game.net     # 鸣潮
+  - DOMAIN,hw-pcdownload-qcloud.aki-game.net  # 鸣潮
+  - DOMAIN,hw-pcdownload-cf.aki-game.net      # 鸣潮
+  - DOMAIN,hw-pcdownload-akamai.aki-game.net  # 鸣潮
