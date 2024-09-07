@@ -87,6 +87,12 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt",
     "path": "./ruleset/loyalsoldier/direct.yaml"
   },
+  "Direct": {
+    ...ruleProviderCommon,
+    "behavior": "domain",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml",
+    "path": "./ruleset/blackmatrix7/Direct.yaml"
+  },
   "private": {
     ...ruleProviderCommon,
     "behavior": "domain",
@@ -422,6 +428,24 @@ const ruleProviders = {
     "behavior": "classical",
     "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical.yaml",
     "path": "./ruleset/blackmatrix7/Netflix_Classical.yaml"
+  },
+  "ChinaMedia": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml",
+    "path": "./ruleset/blackmatrix7/ChinaMedia.yaml"
+  },
+  "Docker": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Docker/Docker.yaml",
+    "path": "./ruleset/blackmatrix7/Docker.yaml"
+  },
+  "Discord": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml",
+    "path": "./ruleset/blackmatrix7/Discord.yaml"
   }
 };
 // 规则
@@ -433,15 +457,15 @@ const rules = [
   'RULE-SET,Download,各种下载器(例如BT下载)',
   'RULE-SET,Xunlei,各种下载器(例如BT下载)',
   // 自定义规则
-  'DOMAIN-SUFFIX,myhome.sixiaolong.win,DIRECT',
-  'DOMAIN-SUFFIX,myhomev4.sixiaolong.win,DIRECT',
-  'DOMAIN-SUFFIX,myhomev6.sixiaolong.win,DIRECT',
-  'DOMAIN-SUFFIX,homeserver.sixiaolong.win,DIRECT',
-  'DOMAIN-SUFFIX,homeserverv4.sixiaolong.win,DIRECT',
-  'DOMAIN-SUFFIX,homeserverv6.sixiaolong.win,DIRECT',
-  'DOMAIN-SUFFIX,web.sixiaolong.win,DIRECT',
-  'DOMAIN-SUFFIX,webv4.sixiaolong.win,DIRECT',
-  'DOMAIN-SUFFIX,webv6.sixiaolong.win,DIRECT',
+  'DOMAIN-SUFFIX,myhome.sixiaolong.win,⬆︎ 全局直连',
+  'DOMAIN-SUFFIX,myhomev4.sixiaolong.win,⬆︎ 全局直连',
+  'DOMAIN-SUFFIX,myhomev6.sixiaolong.win,⬆︎ 全局直连',
+  'DOMAIN-SUFFIX,homeserver.sixiaolong.win,⬆︎ 全局直连',
+  'DOMAIN-SUFFIX,homeserverv4.sixiaolong.win,⬆︎ 全局直连',
+  'DOMAIN-SUFFIX,homeserverv6.sixiaolong.win,⬆︎ 全局直连',
+  'DOMAIN-SUFFIX,web.sixiaolong.win,⬆︎ 全局直连',
+  'DOMAIN-SUFFIX,webv4.sixiaolong.win,⬆︎ 全局直连',
+  'DOMAIN-SUFFIX,webv6.sixiaolong.win,⬆︎ 全局直连',
   'DOMAIN,anthropic.com,AI',
   'DOMAIN,claude.ai,AI',
   "DOMAIN-SUFFIX,googleapis.cn,☑️ 节点选择", // Google服务
@@ -461,10 +485,14 @@ const rules = [
   "RULE-SET,OpenAI,OpenAI",
   "RULE-SET,Google,Google",
   'RULE-SET,GitHub,GitHub',
+  'RULE-SET,Docker,Docker',
+  'RULE-SET,Discord,Discord',
   'RULE-SET,Twitter,Twitter',
-  'RULE-SET,Microsoft,Microsoft',
-  'RULE-SET,Gemini,Gemini',
   'RULE-SET,Copilot,Bing/Copilot',
+  'RULE-SET,Xbox,Xbox',
+  'RULE-SET,OneDrive,OneDrive',
+  'RULE-SET,Microsoft,Microsoft', // 位置必须在其他微软服务之后
+  'RULE-SET,Gemini,Gemini',
   'RULE-SET,Bing,Bing/Copilot',
   'RULE-SET,Facebook,Facebook',
   'RULE-SET,Instagram,Instagram',
@@ -487,20 +515,19 @@ const rules = [
   'RULE-SET,NVIDIA,英伟达',
   'RULE-SET,XiaoMi,小米',
   'RULE-SET,Pixiv,Pixiv',
-  'RULE-SET,OneDrive,OneDrive',
   'RULE-SET,MEGA,MEGA',
   'RULE-SET,Steam,Steam',
   'RULE-SET,SteamCN,Steam(中国大陆)',
   'RULE-SET,Ubisoft,育碧',
   'RULE-SET,GOG,GOG',
   'RULE-SET,EA,EA',
-  'RULE-SET,Xbox,Xbox',
   'RULE-SET,Nintendo,Nintendo',
   'RULE-SET,Epic,Epic',
   'RULE-SET,HoYoverse,HoYoverse',
   'RULE-SET,WutheringWaves,Kuro Games',
   'RULE-SET,AdAds,🚫 广告过滤',
   'RULE-SET,ZhihuAds,🚫 广告过滤',
+  'RULE-SET,ChinaMedia,ChinaMedia',
   // Loyalsoldier 规则集
   "RULE-SET,applications,⬆︎ 全局直连",
   "RULE-SET,private,⬆︎ 全局直连",
@@ -510,10 +537,12 @@ const rules = [
   "RULE-SET,proxy,☑️ 节点选择",
   "RULE-SET,gfw,☑️ 节点选择",
   "RULE-SET,tld-not-cn,☑️ 节点选择",
-  "RULE-SET,direct,⬆︎ 全局直连",
   "RULE-SET,lancidr,⬆︎ 全局直连,no-resolve",
   "RULE-SET,cncidr,⬆︎ 全局直连,no-resolve",
   "RULE-SET,telegramcidr,Telegram,no-resolve",
+  // 低优先
+  "RULE-SET,Direct,⬆︎ 全局直连",       // 其余需要直连的规则
+  "RULE-SET,direct,⬆︎ 全局直连",       // 比上一天更全，但与上面许多分流规则有包含关系，低优先
   // 其他规则
   "GEOIP,LAN,⬆︎ 全局直连,no-resolve",
   "GEOIP,CN,⬆︎ 全局直连,no-resolve",
@@ -653,6 +682,14 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "Docker",
+      "type": "select",
+      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 全局直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": ""
+    },
+    {
+      ...groupBaseOption,
       "name": "Twitter",
       "type": "select",
       "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 全局直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
@@ -673,7 +710,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "Apple",
       "type": "select",
-      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 全局直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "proxies": ["⬆︎ 全局直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"
     },
@@ -719,6 +756,14 @@ function main(config) {
       "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 全局直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Facebook.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Discord",
+      "type": "select",
+      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 全局直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Discord.png"
     },
     {
       ...groupBaseOption,
@@ -1023,6 +1068,14 @@ function main(config) {
       "proxies": ["⬆︎ 全局直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "ChinaMedia",
+      "type": "select",
+      "proxies": ["⬆︎ 全局直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": ""
     },
     {
       ...groupBaseOption,
