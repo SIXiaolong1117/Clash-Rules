@@ -476,12 +476,32 @@ const ruleProviders = {
     "behavior": "classical",
     "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Civitai/Civitai.yaml",
     "path": "./ruleset/blackmatrix7/Civitai.yaml"
+  },
+  "Claude": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml",
+    "path": "./ruleset/blackmatrix7/Claude.yaml"
+  },
+  "Cloudflare": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare.yaml",
+    "path": "./ruleset/blackmatrix7/Cloudflare.yaml"
+  },
+  "Hijacking": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml",
+    "path": "./ruleset/blackmatrix7/Hijacking.yaml"
   }
 };
 // 规则
 const rules = [
   // 高优先
   'PROCESS-NAME,ONCE_HUMAN.exe,七日世界', // 七日世界国际服游戏代理。下载资源时开直连，不下资源需要挂代理才能进国际服。
+  'PROCESS-NAME,mp24-cod.exe,使命召唤',
+  'PROCESS-NAME,cod.exe,使命召唤',
   "RULE-SET,GameDownload,游戏下载",
   "RULE-SET,GameDownloadCN,游戏下载(中国)",
   'RULE-SET,Download,各种下载器(例如BT下载)',
@@ -496,8 +516,6 @@ const rules = [
   'DOMAIN-SUFFIX,web.sixiaolong.win,⬆︎ 直连',
   'DOMAIN-SUFFIX,webv4.sixiaolong.win,⬆︎ 直连',
   'DOMAIN-SUFFIX,webv6.sixiaolong.win,⬆︎ 直连',
-  'DOMAIN,anthropic.com,AI',
-  'DOMAIN,claude.ai,AI',
   "DOMAIN-SUFFIX,googleapis.cn,☑️ 节点选择", // Google服务
   "DOMAIN-SUFFIX,gstatic.com,☑️ 节点选择", // Google静态资源
   "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,☑️ 节点选择", // Google Play下载服务
@@ -512,9 +530,10 @@ const rules = [
   // SIXiaolong1117 规则集
   'RULE-SET,UbisoftMe,育碧',
   // blackmatrix7 规则集
-  'RULE-SET,Privacy,🚫 防止跟踪',
+  'RULE-SET,Privacy,🛡️ 隐私保护',
   'RULE-SET,AdAds,🚫 广告过滤',
   'RULE-SET,ZhihuAds,🚫 广告过滤',
+  'RULE-SET,Hijacking,🐞 反劫持',
   "RULE-SET,Netflix,Netflix",
   "RULE-SET,OpenAI,OpenAI",
   "RULE-SET,Google,Google",
@@ -529,6 +548,7 @@ const rules = [
   'RULE-SET,Microsoft,Microsoft', // 位置必须在其他微软服务之后
   'RULE-SET,Gemini,Gemini',
   'RULE-SET,Bing,Bing/Copilot',
+  'RULE-SET,Claude,Claude',
   'RULE-SET,Facebook,Facebook',
   'RULE-SET,Instagram,Instagram',
   'RULE-SET,TikTok,TikTok',
@@ -563,6 +583,7 @@ const rules = [
   'RULE-SET,WutheringWaves,Kuro Games',
   'RULE-SET,Dropbox,Dropbox',
   'RULE-SET,Civitai,Civitai',
+  'RULE-SET,Cloudflare,Cloudflare',
   'RULE-SET,ChinaMedia,ChinaMedia', // 低优先
   // Loyalsoldier 规则集
   "RULE-SET,applications,⬆︎ 直连",
@@ -718,6 +739,14 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "Cloudflare",
+      "type": "select",
+      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://www.clashverge.dev/assets/icons/cloudflare.svg"
+    },
+    {
+      ...groupBaseOption,
       "name": "Docker",
       "type": "select",
       "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
@@ -779,11 +808,11 @@ function main(config) {
     },
     {
       ...groupBaseOption,
-      "name": "AI",
+      "name": "Claude",
       "type": "select",
       "proxies": ["🇺🇸 美国优选", "🇭🇰 香港优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连"],
       "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/SSR.png"
+      "icon": "https://www.clashverge.dev/assets/icons/claude.svg"
     },
     {
       ...groupBaseOption,
@@ -1099,6 +1128,14 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "使命召唤",
+      "type": "select",
+      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://clash-logo.sixiaolong.win/COD.png"
+    },
+    {
+      ...groupBaseOption,
       "name": "Civitai",
       "type": "select",
       "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
@@ -1142,14 +1179,21 @@ function main(config) {
       "name": "🚫 广告过滤",
       "type": "select",
       "proxies": ["❌️ 拦截", "⬆︎ 直连"],
-      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Clubhouse.png"
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Advertising.png"
     },
     {
       ...groupBaseOption,
-      "name": "🚫 防止跟踪",
+      "name": "🐞 反劫持",
+      "type": "select",
+      "proxies": ["❌️ 拦截", "⬆︎ 直连"],
+      "icon": "https://www.clashverge.dev/assets/icons/bug.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🛡️ 隐私保护",
       "type": "select",
       "proxies": ["⬆︎ 直连", "❌️ 拦截"],
-      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Clubhouse.png"
+      "icon": "https://www.clashverge.dev/assets/icons/guard.svg"
     },
     {
       ...groupBaseOption,
