@@ -225,6 +225,18 @@ const ruleProviders = {
     "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBiliIntl/BiliBiliIntl.yaml",
     "path": "./ruleset/blackmatrix7/BiliBili_Intl.yaml"
   },
+  "iQIYI": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iQIYI/iQIYI.yaml",
+    "path": "./ruleset/blackmatrix7/iQIYI.yaml"
+  },
+  "iQIYI_Intl": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iQIYIIntl/iQIYIIntl.yaml",
+    "path": "./ruleset/blackmatrix7/iQIYI_Intl.yaml"
+  },
   "YouTube": {
     ...ruleProviderCommon,
     "behavior": "classical",
@@ -494,11 +506,28 @@ const ruleProviders = {
     "behavior": "classical",
     "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml",
     "path": "./ruleset/blackmatrix7/Hijacking.yaml"
+  },
+  "Amazon": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Amazon/Amazon.yaml",
+    "path": "./ruleset/blackmatrix7/Amazon.yaml"
+  },
+  "Spotify": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml",
+    "path": "./ruleset/blackmatrix7/Spotify.yaml"
   }
 };
 // 规则
 const rules = [
   // 高优先
+  'RULE-SET,Privacy,🛡️ 隐私保护',
+  'RULE-SET,AdAds,🚫 广告过滤',
+  'RULE-SET,ZhihuAds,🚫 广告过滤',
+  'RULE-SET,Hijacking,🐞 反劫持',
+  "DOMAIN,hknoyk.xyz,⬆︎ 直连",   // Amy
   'PROCESS-NAME,ONCE_HUMAN.exe,七日世界', // 七日世界国际服游戏代理。下载资源时开直连，不下资源需要挂代理才能进国际服。
   'PROCESS-NAME,mp24-cod.exe,使命召唤',
   'PROCESS-NAME,cod.exe,使命召唤',
@@ -527,14 +556,10 @@ const rules = [
   'PROCESS-NAME,thedivision2launcher.exe,育碧',
   "DOMAIN-SUFFIX,getgrass.io,☑️ 节点选择",
   'DOMAIN-SUFFIX,hassbian.com,⬆︎ 直连',
+  'DOMAIN-SUFFIX,v2ex.com,V2EX',
   // SIXiaolong1117 规则集
   'RULE-SET,UbisoftMe,育碧',
   // blackmatrix7 规则集
-  'RULE-SET,Privacy,🛡️ 隐私保护',
-  'RULE-SET,AdAds,🚫 广告过滤',
-  'RULE-SET,ZhihuAds,🚫 广告过滤',
-  'RULE-SET,Hijacking,🐞 反劫持',
-  "RULE-SET,Netflix,Netflix",
   "RULE-SET,OpenAI,OpenAI",
   "RULE-SET,Google,Google",
   'RULE-SET,GitHub,GitHub',
@@ -572,7 +597,7 @@ const rules = [
   'RULE-SET,Pixiv,Pixiv',
   'RULE-SET,MEGA,MEGA',
   'RULE-SET,Steam,Steam',
-  'RULE-SET,SteamCN,Steam(中国大陆)',
+  'RULE-SET,SteamCN,Steam 中国大陆',
   'RULE-SET,Ubisoft,育碧',
   'RULE-SET,GOG,GOG',
   'RULE-SET,EA,EA',
@@ -584,7 +609,11 @@ const rules = [
   'RULE-SET,Dropbox,Dropbox',
   'RULE-SET,Civitai,Civitai',
   'RULE-SET,Cloudflare,Cloudflare',
-  'RULE-SET,ChinaMedia,ChinaMedia', // 低优先
+  'RULE-SET,Amazon,Amazon',
+  "RULE-SET,Netflix,Netflix",
+  "RULE-SET,iQIYI,爱奇艺",
+  "RULE-SET,iQIYI_Intl,爱奇艺 国际",
+  "RULE-SET,Spotify,Spotify",
   // Loyalsoldier 规则集
   "RULE-SET,applications,⬆︎ 直连",
   "RULE-SET,private,⬆︎ 直连",
@@ -597,7 +626,8 @@ const rules = [
   "RULE-SET,lancidr,⬆︎ 直连,no-resolve",
   "RULE-SET,cncidr,⬆︎ 直连,no-resolve",
   "RULE-SET,telegramcidr,Telegram,no-resolve",
-  // 低优先
+  // 低优先  
+  'RULE-SET,ChinaMedia,ChinaMedia', // 低优先
   "RULE-SET,Direct,⬆︎ 直连",       // 其余需要直连的规则
   "RULE-SET,direct,⬆︎ 直连",       // 比上一天更全，但与上面许多分流规则有包含关系，低优先
   // 其他规则
@@ -693,7 +723,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "☑️ 节点选择",
       "type": "select",
-      "proxies": ["⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)"],
+      "proxies": ["⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
     },
@@ -872,6 +902,22 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "爱奇艺",
+      "type": "select",
+      "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/iQIYI_1.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "爱奇艺 国际",
+      "type": "select",
+      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/iQIYI.png"
+    },
+    {
+      ...groupBaseOption,
       "name": "Youtube",
       "type": "select",
       "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
@@ -901,6 +947,14 @@ function main(config) {
       "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Netflix.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Spotify",
+      "type": "select",
+      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Spotify.png"
     },
     {
       ...groupBaseOption,
@@ -949,6 +1003,14 @@ function main(config) {
       "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://clash-logo.sixiaolong.win/Xiaohongshu.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "V2EX",
+      "type": "select",
+      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://clash-logo.sixiaolong.win/V2EX.png"
     },
     {
       ...groupBaseOption,
@@ -1040,7 +1102,7 @@ function main(config) {
     },
     {
       ...groupBaseOption,
-      "name": "Steam(中国大陆)",
+      "name": "Steam 中国大陆",
       "type": "select",
       "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
@@ -1140,7 +1202,15 @@ function main(config) {
       "type": "select",
       "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
-      "icon": ""
+      "icon": "https://clash-logo.sixiaolong.win/Civitai.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "Amazon",
+      "type": "select",
+      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://clash-logo.sixiaolong.win/Civitai.png"
     },
     {
       ...groupBaseOption,
