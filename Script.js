@@ -518,6 +518,12 @@ const ruleProviders = {
     "behavior": "classical",
     "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml",
     "path": "./ruleset/blackmatrix7/Spotify.yaml"
+  },
+  "BattleNet": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/BattleNet.yaml",
+    "path": "./ruleset/blackmatrix7/BattleNet.yaml"
   }
 };
 // 规则
@@ -556,7 +562,26 @@ const rules = [
   'PROCESS-NAME,thedivision2launcher.exe,育碧',
   "DOMAIN-SUFFIX,getgrass.io,☑️ 节点选择",
   'DOMAIN-SUFFIX,hassbian.com,⬆︎ 直连',
-  'DOMAIN-SUFFIX,v2ex.com,V2EX',
+  'DOMAIN-SUFFIX,v2ex.com,V2EX', 
+  'PROCESS-NAME,aces.exe,战争雷霆',
+  // FF14
+  'PROCESS-NAME,ffxivboot.exe,最终幻想14',
+  'PROCESS-NAME,ffxivboot64.exe,最终幻想14',
+  'PROCESS-NAME,ffxivconfig64.exe,最终幻想14',
+  'PROCESS-NAME,ffxivlauncher64.exe,最终幻想14',
+  'PROCESS-NAME,ffxivsysinfo.exe,最终幻想14',
+  'PROCESS-NAME,ffxivsysinfo64.exe,最终幻想14',
+  'PROCESS-NAME,ffxivupdater64.exe,最终幻想14',
+  'PROCESS-NAME,ffxiv_dx11.exe,最终幻想14',
+  // 梦幻之星
+  'PROCESS-NAME,pso2.exe,梦幻之星 Online2 New Genesis',
+  'PROCESS-NAME,pso2download.exe,梦幻之星 Online2 New Genesis',
+  'PROCESS-NAME,pso2launcher.exe,梦幻之星 Online2 New Genesis',
+  'PROCESS-NAME,pso2predownload.exe,梦幻之星 Online2 New Genesis',
+  'PROCESS-NAME,pso2restart.exe,梦幻之星 Online2 New Genesis',
+  'PROCESS-NAME,pso2updater.exe,梦幻之星 Online2 New Genesis',
+  // EVE Online
+  'PROCESS-NAME,exefile.exe,EVE Online',
   // SIXiaolong1117 规则集
   'RULE-SET,UbisoftMe,育碧',
   // blackmatrix7 规则集
@@ -614,6 +639,7 @@ const rules = [
   "RULE-SET,iQIYI,爱奇艺",
   "RULE-SET,iQIYI_Intl,爱奇艺 国际",
   "RULE-SET,Spotify,Spotify",
+  "RULE-SET,BattleNet,BattleNet",
   // Loyalsoldier 规则集
   "RULE-SET,applications,⬆︎ 直连",
   "RULE-SET,private,⬆︎ 直连",
@@ -1166,6 +1192,14 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "BattleNet",
+      "type": "select",
+      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/BattleNet.png"
+    },
+    {
+      ...groupBaseOption,
       "name": "HoYoverse",
       "type": "select",
       "proxies": ["🇯🇵 日本优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
@@ -1187,6 +1221,38 @@ function main(config) {
       "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://clash-logo.sixiaolong.win/OnceHuman.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "最终幻想14",
+      "type": "select",
+      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://clash-logo.sixiaolong.win/FF14.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "梦幻之星 Online2 New Genesis",
+      "type": "select",
+      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://clash-logo.sixiaolong.win/PSO2NGS.png"
+    },    
+    {
+      ...groupBaseOption,
+      "name": "EVE Online",
+      "type": "select",
+      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://clash-logo.sixiaolong.win/EVE.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "战争雷霆",
+      "type": "select",
+      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://clash-logo.sixiaolong.win/WT.png"
     },
     {
       ...groupBaseOption,
@@ -1224,7 +1290,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "游戏下载",
       "type": "select",
-      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png"
     },
