@@ -524,6 +524,12 @@ const ruleProviders = {
     "behavior": "classical",
     "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/BattleNet.yaml",
     "path": "./ruleset/blackmatrix7/BattleNet.yaml"
+  },
+  "Adobe": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Adobe/Adobe.yaml",
+    "path": "./ruleset/blackmatrix7/Adobe.yaml"
   }
 };
 // 规则
@@ -533,7 +539,12 @@ const rules = [
   'RULE-SET,AdAds,🚫 广告过滤',
   'RULE-SET,ZhihuAds,🚫 广告过滤',
   'RULE-SET,Hijacking,🐞 反劫持',
-  "DOMAIN,hknoyk.xyz,⬆︎ 直连",   // Amy
+  'RULE-SET,Adobe,Adobe',
+  'PROCESS-NAME,Photoshop.exe,Adobe',
+  'PROCESS-NAME,Adobe Premiere Pro.exe,Adobe',
+  'PROCESS-NAME,Adobe Media Encoder.exe,Adobe',
+  'PROCESS-NAME,AfterFX.exe.exe,Adobe',
+  'PROCESS-NAME,Acrobat.exe,Adobe',
   'PROCESS-NAME,ONCE_HUMAN.exe,七日世界', // 七日世界国际服游戏代理。下载资源时开直连，不下资源需要挂代理才能进国际服。
   'PROCESS-NAME,mp24-cod.exe,使命召唤',
   'PROCESS-NAME,cod.exe,使命召唤',
