@@ -575,6 +575,11 @@ const rules = [
   'DOMAIN-SUFFIX,hassbian.com,⬆︎ 直连',
   'DOMAIN-SUFFIX,v2ex.com,V2EX', 
   'PROCESS-NAME,aces.exe,战争雷霆',
+  'PROCESS-NAME,reverse1999.exe,重返未来1999',
+  // 无限暖暖
+  'PROCESS-NAME,InfinityNikki.exe,无限暖暖',
+  'PROCESS-NAME,X6Game-Win64-Shipping.exe,无限暖暖',
+  'PROCESS-NAME,xstarter.exe,无限暖暖',
   // FF14
   'PROCESS-NAME,ffxivboot.exe,最终幻想14',
   'PROCESS-NAME,ffxivboot64.exe,最终幻想14',
@@ -596,6 +601,7 @@ const rules = [
   // SIXiaolong1117 规则集
   'RULE-SET,UbisoftMe,育碧',
   // blackmatrix7 规则集
+  "RULE-SET,Zhihu,知乎",
   "RULE-SET,OpenAI,OpenAI",
   "RULE-SET,Google,Google",
   'RULE-SET,GitHub,GitHub',
@@ -1005,7 +1011,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "知乎",
       "type": "select",
-      "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "proxies": ["⬆︎ 直连", "❌️ 拦截", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/zhihu.png"
     },
@@ -1013,7 +1019,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "微博",
       "type": "select",
-      "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "proxies": ["⬆︎ 直连", "❌️ 拦截", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/weibo.png"
     },
@@ -1207,7 +1213,7 @@ function main(config) {
       "type": "select",
       "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/BattleNet.png"
+      "icon": "https://clash-logo.sixiaolong.win/BattleNet.png"
     },
     {
       ...groupBaseOption,
@@ -1224,6 +1230,14 @@ function main(config) {
       "proxies": ["🇯🇵 日本优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://clash-logo.sixiaolong.win/KUROGAME.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "无限暖暖",
+      "type": "select",
+      "proxies": ["🇯🇵 日本优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://clash-logo.sixiaolong.win/InfinityNikki.png"
     },
     {
       ...groupBaseOption,
@@ -1272,6 +1286,14 @@ function main(config) {
       "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://clash-logo.sixiaolong.win/COD.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "重返未来1999",
+      "type": "select",
+      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://clash-logo.sixiaolong.win/1999.png"
     },
     {
       ...groupBaseOption,
