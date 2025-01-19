@@ -545,7 +545,7 @@ const rules = [
   'PROCESS-NAME,Adobe Media Encoder.exe,Adobe',
   'PROCESS-NAME,AfterFX.exe.exe,Adobe',
   'PROCESS-NAME,Acrobat.exe,Adobe',
-  'PROCESS-NAME,ONCE_HUMAN.exe,七日世界', // 七日世界国际服游戏代理。下载资源时开直连，不下资源需要挂代理才能进国际服。
+  // 'PROCESS-NAME,ONCE_HUMAN.exe,七日世界', // 七日世界国际服游戏代理。下载资源时开直连，不下资源需要挂代理才能进国际服。
   'PROCESS-NAME,mp24-cod.exe,使命召唤',
   'PROCESS-NAME,cod.exe,使命召唤',
   "RULE-SET,GameDownload,游戏下载",
@@ -573,29 +573,31 @@ const rules = [
   'PROCESS-NAME,thedivision2launcher.exe,育碧',
   "DOMAIN-SUFFIX,getgrass.io,☑️ 节点选择",
   'DOMAIN-SUFFIX,hassbian.com,⬆︎ 直连',
-  'DOMAIN-SUFFIX,v2ex.com,V2EX', 
+  'DOMAIN-SUFFIX,v2ex.com,V2EX',
   'PROCESS-NAME,aces.exe,战争雷霆',
   'PROCESS-NAME,reverse1999.exe,重返未来1999',
+  'PROCESS-NAME,Diablo IV Launcher.exe,暗黑破坏神4',
+  'PROCESS-NAME,Diablo IV.exe,暗黑破坏神4',
   // 无限暖暖
   'PROCESS-NAME,InfinityNikki.exe,无限暖暖',
   'PROCESS-NAME,X6Game-Win64-Shipping.exe,无限暖暖',
   'PROCESS-NAME,xstarter.exe,无限暖暖',
   // FF14
-  'PROCESS-NAME,ffxivboot.exe,最终幻想14',
-  'PROCESS-NAME,ffxivboot64.exe,最终幻想14',
-  'PROCESS-NAME,ffxivconfig64.exe,最终幻想14',
-  'PROCESS-NAME,ffxivlauncher64.exe,最终幻想14',
-  'PROCESS-NAME,ffxivsysinfo.exe,最终幻想14',
-  'PROCESS-NAME,ffxivsysinfo64.exe,最终幻想14',
-  'PROCESS-NAME,ffxivupdater64.exe,最终幻想14',
-  'PROCESS-NAME,ffxiv_dx11.exe,最终幻想14',
+  // 'PROCESS-NAME,ffxivboot.exe,最终幻想14',
+  // 'PROCESS-NAME,ffxivboot64.exe,最终幻想14',
+  // 'PROCESS-NAME,ffxivconfig64.exe,最终幻想14',
+  // 'PROCESS-NAME,ffxivlauncher64.exe,最终幻想14',
+  // 'PROCESS-NAME,ffxivsysinfo.exe,最终幻想14',
+  // 'PROCESS-NAME,ffxivsysinfo64.exe,最终幻想14',
+  // 'PROCESS-NAME,ffxivupdater64.exe,最终幻想14',
+  // 'PROCESS-NAME,ffxiv_dx11.exe,最终幻想14',
   // 梦幻之星
-  'PROCESS-NAME,pso2.exe,梦幻之星 Online2 New Genesis',
-  'PROCESS-NAME,pso2download.exe,梦幻之星 Online2 New Genesis',
-  'PROCESS-NAME,pso2launcher.exe,梦幻之星 Online2 New Genesis',
-  'PROCESS-NAME,pso2predownload.exe,梦幻之星 Online2 New Genesis',
-  'PROCESS-NAME,pso2restart.exe,梦幻之星 Online2 New Genesis',
-  'PROCESS-NAME,pso2updater.exe,梦幻之星 Online2 New Genesis',
+  // 'PROCESS-NAME,pso2.exe,梦幻之星 Online2 New Genesis',
+  // 'PROCESS-NAME,pso2download.exe,梦幻之星 Online2 New Genesis',
+  // 'PROCESS-NAME,pso2launcher.exe,梦幻之星 Online2 New Genesis',
+  // 'PROCESS-NAME,pso2predownload.exe,梦幻之星 Online2 New Genesis',
+  // 'PROCESS-NAME,pso2restart.exe,梦幻之星 Online2 New Genesis',
+  // 'PROCESS-NAME,pso2updater.exe,梦幻之星 Online2 New Genesis',
   // EVE Online
   'PROCESS-NAME,exefile.exe,EVE Online',
   // SIXiaolong1117 规则集
@@ -609,7 +611,7 @@ const rules = [
   'RULE-SET,Discord,Discord',
   'RULE-SET,Twitter,Twitter',
   'RULE-SET,Copilot,Bing/Copilot',
-  'RULE-SET,PlayStation,PlayStation',
+  // 'RULE-SET,PlayStation,PlayStation',
   'RULE-SET,Xbox,Xbox',
   'RULE-SET,OneDrive,OneDrive',
   'RULE-SET,Microsoft,Microsoft', // 位置必须在其他微软服务之后
@@ -627,14 +629,14 @@ const rules = [
   'RULE-SET,NicoNico,NicoNico',
   'RULE-SET,PayPal,PayPal',
   'RULE-SET,Weibo,微博',
-  'RULE-SET,Baidu,百度',
-  'RULE-SET,BaiduTieba,百度贴吧',
+  // 'RULE-SET,Baidu,百度',
+  // 'RULE-SET,BaiduTieba,百度贴吧',
   'RULE-SET,RedNote,小红书',
-  'RULE-SET,OKX,加密货币交易所',
-  'RULE-SET,Binance,加密货币交易所',
-  'RULE-SET,Wikimedia,Wikipedia',
-  'RULE-SET,Wikipedia,Wikipedia',
-  'RULE-SET,NVIDIA,英伟达',
+  // 'RULE-SET,OKX,加密货币交易所',
+  // 'RULE-SET,Binance,加密货币交易所',
+  // 'RULE-SET,Wikimedia,Wikipedia',
+  // 'RULE-SET,Wikipedia,Wikipedia',
+  // 'RULE-SET,NVIDIA,英伟达',
   'RULE-SET,XiaoMi,小米',
   'RULE-SET,Pixiv,Pixiv',
   'RULE-SET,MEGA,MEGA',
@@ -647,15 +649,15 @@ const rules = [
   'RULE-SET,Nintendo,Nintendo',
   'RULE-SET,Epic,Epic',
   'RULE-SET,HoYoverse,HoYoverse',
-  'RULE-SET,WutheringWaves,Kuro Games',
+  // 'RULE-SET,WutheringWaves,Kuro Games',
   'RULE-SET,Dropbox,Dropbox',
   'RULE-SET,Civitai,Civitai',
   'RULE-SET,Cloudflare,Cloudflare',
   'RULE-SET,Amazon,Amazon',
-  "RULE-SET,Netflix,Netflix",
-  "RULE-SET,iQIYI,爱奇艺",
-  "RULE-SET,iQIYI_Intl,爱奇艺 国际",
-  "RULE-SET,Spotify,Spotify",
+  // "RULE-SET,Netflix,Netflix",
+  // "RULE-SET,iQIYI,爱奇艺",
+  // "RULE-SET,iQIYI_Intl,爱奇艺 国际",
+  // "RULE-SET,Spotify,Spotify",
   "RULE-SET,BattleNet,BattleNet",
   // Loyalsoldier 规则集
   "RULE-SET,applications,⬆︎ 直连",
@@ -670,7 +672,7 @@ const rules = [
   "RULE-SET,cncidr,⬆︎ 直连,no-resolve",
   "RULE-SET,telegramcidr,Telegram,no-resolve",
   // 低优先  
-  'RULE-SET,ChinaMedia,ChinaMedia', // 低优先
+  'RULE-SET,ChinaMedia,⬆︎ 直连', // 低优先
   "RULE-SET,Direct,⬆︎ 直连",       // 其余需要直连的规则
   "RULE-SET,direct,⬆︎ 直连",       // 比上一天更全，但与上面许多分流规则有包含关系，低优先
   // 其他规则
@@ -704,6 +706,14 @@ function main(config) {
   config["proxy-groups"] = [
     {
       ...groupBaseOption,
+      "name": "☑️ 节点选择",
+      "type": "select",
+      "proxies": ["⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
+    },
+    {
+      ...groupBaseOption,
       "name": "⚡ 延迟选优",
       "type": "url-test",
       "tolerance": 100,
@@ -716,75 +726,6 @@ function main(config) {
       "type": "fallback",
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg"
-    },
-    {
-      ...groupBaseOption,
-      "name": "🇭🇰 香港优选",
-      "type": "url-test",
-      "tolerance": 100,
-      "include-all": true,
-      "filter": "HK|🇭🇰",
-      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "🇺🇸 美国优选",
-      "type": "url-test",
-      "tolerance": 100,
-      "include-all": true,
-      "filter": "US|🇺🇸",
-      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "🇯🇵 日本优选",
-      "type": "url-test",
-      "tolerance": 100,
-      "include-all": true,
-      "filter": "JP|🇯🇵",
-      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "🇨🇳 台湾优选",
-      "type": "url-test",
-      "tolerance": 100,
-      "include-all": true,
-      "filter": "TW|🇨🇳",
-      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "🇸🇬 新加坡优选",
-      "type": "url-test",
-      "tolerance": 100,
-      "include-all": true,
-      "filter": "SG|🇸🇬",
-      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "☑️ 节点选择",
-      "type": "select",
-      "proxies": ["⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
-    },
-    {
-      ...groupBaseOption,
-      "name": "负载均衡(散列)",
-      "type": "load-balance",
-      "strategy": "consistent-hashing",
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/merry_go.svg"
-    },
-    {
-      ...groupBaseOption,
-      "name": "负载均衡(轮询)",
-      "type": "load-balance",
-      "strategy": "round-robin",
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg"
     },
     {
       ...groupBaseOption,
@@ -889,6 +830,14 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "name": "Civitai",
+      "type": "select",
+      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://clash-logo.sixiaolong.win/Civitai.png"
+    },
+    {
+      ...groupBaseOption,
       "name": "Facebook",
       "type": "select",
       "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
@@ -943,22 +892,22 @@ function main(config) {
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili.png"
     },
-    {
-      ...groupBaseOption,
-      "name": "爱奇艺",
-      "type": "select",
-      "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/iQIYI_1.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "爱奇艺 国际",
-      "type": "select",
-      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/iQIYI.png"
-    },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "爱奇艺",
+    //   "type": "select",
+    //   "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/iQIYI_1.png"
+    // },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "爱奇艺 国际",
+    //   "type": "select",
+    //   "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/iQIYI.png"
+    // },
     {
       ...groupBaseOption,
       "name": "Youtube",
@@ -983,22 +932,22 @@ function main(config) {
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/niconico.png"
     },
-    {
-      ...groupBaseOption,
-      "name": "Netflix",
-      "type": "select",
-      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Netflix.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Spotify",
-      "type": "select",
-      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Spotify.png"
-    },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "Netflix",
+    //   "type": "select",
+    //   "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Netflix.png"
+    // },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "Spotify",
+    //   "type": "select",
+    //   "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Spotify.png"
+    // },
     {
       ...groupBaseOption,
       "name": "PayPal",
@@ -1023,22 +972,22 @@ function main(config) {
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/weibo.png"
     },
-    {
-      ...groupBaseOption,
-      "name": "百度",
-      "type": "select",
-      "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/baidu.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "百度贴吧",
-      "type": "select",
-      "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/baidu.png"
-    },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "百度",
+    //   "type": "select",
+    //   "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/baidu.png"
+    // },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "百度贴吧",
+    //   "type": "select",
+    //   "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/baidu.png"
+    // },
     {
       ...groupBaseOption,
       "name": "小红书",
@@ -1057,20 +1006,28 @@ function main(config) {
     },
     {
       ...groupBaseOption,
-      "name": "加密货币交易所",
-      "type": "select",
-      "proxies": ["🇸🇬 新加坡优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选"],
-      "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/Binance.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Wikipedia",
+      "name": "Amazon",
       "type": "select",
       "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/wikipedia.png"
+      "icon": "https://clash-logo.sixiaolong.win/Amazon.png"
     },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "加密货币交易所",
+    //   "type": "select",
+    //   "proxies": ["🇸🇬 新加坡优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选"],
+    //   "include-all": true,
+    //   "icon": "https://clash-logo.sixiaolong.win/Binance.png"
+    // },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "Wikipedia",
+    //   "type": "select",
+    //   "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://clash-logo.sixiaolong.win/wikipedia.png"
+    // },
     {
       ...groupBaseOption,
       "name": "Adobe",
@@ -1079,14 +1036,14 @@ function main(config) {
       "include-all": true,
       "icon": "https://clash-logo.sixiaolong.win/Adobe.png"
     },
-    {
-      ...groupBaseOption,
-      "name": "英伟达",
-      "type": "select",
-      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/NVIDIA.png"
-    },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "英伟达",
+    //   "type": "select",
+    //   "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://clash-logo.sixiaolong.win/NVIDIA.png"
+    // },
     {
       ...groupBaseOption,
       "name": "小米",
@@ -1175,14 +1132,14 @@ function main(config) {
       "include-all": true,
       "icon": "https://clash-logo.sixiaolong.win/EA.png"
     },
-    {
-      ...groupBaseOption,
-      "name": "PlayStation",
-      "type": "select",
-      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PlayStation.png"
-    },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "PlayStation",
+    //   "type": "select",
+    //   "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PlayStation.png"
+    // },
     {
       ...groupBaseOption,
       "name": "Xbox",
@@ -1223,14 +1180,14 @@ function main(config) {
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/mihoyo.png"
     },
-    {
-      ...groupBaseOption,
-      "name": "Kuro Games",
-      "type": "select",
-      "proxies": ["🇯🇵 日本优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/KUROGAME.png"
-    },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "Kuro Games",
+    //   "type": "select",
+    //   "proxies": ["🇯🇵 日本优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://clash-logo.sixiaolong.win/KUROGAME.png"
+    // },
     {
       ...groupBaseOption,
       "name": "无限暖暖",
@@ -1239,30 +1196,30 @@ function main(config) {
       "include-all": true,
       "icon": "https://clash-logo.sixiaolong.win/InfinityNikki.png"
     },
-    {
-      ...groupBaseOption,
-      "name": "七日世界",
-      "type": "select",
-      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/OnceHuman.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "最终幻想14",
-      "type": "select",
-      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/FF14.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "梦幻之星 Online2 New Genesis",
-      "type": "select",
-      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/PSO2NGS.png"
-    },    
+    // {
+    //   ...groupBaseOption,
+    //   "name": "七日世界",
+    //   "type": "select",
+    //   "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://clash-logo.sixiaolong.win/OnceHuman.png"
+    // },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "最终幻想14",
+    //   "type": "select",
+    //   "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://clash-logo.sixiaolong.win/FF14.png"
+    // },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "梦幻之星 Online2 New Genesis",
+    //   "type": "select",
+    //   "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://clash-logo.sixiaolong.win/PSO2NGS.png"
+    // },    
     {
       ...groupBaseOption,
       "name": "EVE Online",
@@ -1291,25 +1248,17 @@ function main(config) {
       ...groupBaseOption,
       "name": "重返未来1999",
       "type": "select",
-      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港负载均衡(散列)", "🇺🇸 美国优选", "🇺🇸 美国负载均衡(散列)", "🇯🇵 日本优选", "🇯🇵 日本负载均衡(散列)", "🇨🇳 台湾优选", "🇨🇳 台湾负载均衡(散列)", "🇸🇬 新加坡优选", "🇸🇬 新加坡负载均衡(散列)"],
       "include-all": true,
       "icon": "https://clash-logo.sixiaolong.win/1999.png"
     },
     {
       ...groupBaseOption,
-      "name": "Civitai",
+      "name": "暗黑破坏神4",
       "type": "select",
-      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/Civitai.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "Amazon",
-      "type": "select",
-      "proxies": ["☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/Civitai.png"
+      "icon": "https://clash-logo.sixiaolong.win/1999.png"
     },
     {
       ...groupBaseOption,
@@ -1334,14 +1283,6 @@ function main(config) {
       "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "ChinaMedia",
-      "type": "select",
-      "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/DomesticMedia.png"
     },
     {
       ...groupBaseOption,
@@ -1385,6 +1326,112 @@ function main(config) {
       "type": "select",
       "proxies": ["REJECT"],
       "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Reject.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "负载均衡(散列)",
+      "type": "load-balance",
+      "strategy": "consistent-hashing",
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/merry_go.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "负载均衡(轮询)",
+      "type": "load-balance",
+      "strategy": "round-robin",
+      "include-all": true,
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/balance.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇭🇰 香港优选",
+      "type": "url-test",
+      "tolerance": 100,
+      "include-all": true,
+      "filter": "HK|🇭🇰",
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇭🇰 香港负载均衡(散列)",
+      "type": "load-balance",
+      "strategy": "consistent-hashing",
+      "include-all": true,
+      "filter": "HK|🇭🇰",
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇺🇸 美国优选",
+      "type": "url-test",
+      "tolerance": 100,
+      "include-all": true,
+      "filter": "US|🇺🇸",
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇺🇸 美国负载均衡(散列)",
+      "type": "load-balance",
+      "strategy": "consistent-hashing",
+      "include-all": true,
+      "filter": "US|🇺🇸",
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇯🇵 日本优选",
+      "type": "url-test",
+      "tolerance": 100,
+      "include-all": true,
+      "filter": "JP|🇯🇵",
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇯🇵 日本负载均衡(散列)",
+      "type": "load-balance",
+      "strategy": "consistent-hashing",
+      "include-all": true,
+      "filter": "JP|🇯🇵",
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇨🇳 台湾优选",
+      "type": "url-test",
+      "tolerance": 100,
+      "include-all": true,
+      "filter": "TW|🇨🇳",
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇨🇳 台湾负载均衡(散列)",
+      "type": "load-balance",
+      "strategy": "consistent-hashing",
+      "include-all": true,
+      "filter": "TW|🇨🇳",
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇸🇬 新加坡优选",
+      "type": "url-test",
+      "tolerance": 100,
+      "include-all": true,
+      "filter": "SG|🇸🇬",
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇸🇬 新加坡负载均衡(散列)",
+      "type": "load-balance",
+      "strategy": "consistent-hashing",
+      "include-all": true,
+      "filter": "SG|🇸🇬",
+      "icon": "https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png"
     },
   ];
 
