@@ -603,7 +603,7 @@ const rules = [
   // SIXiaolong1117 规则集
   'RULE-SET,UbisoftMe,育碧',
   // blackmatrix7 规则集
-  "RULE-SET,Zhihu,知乎",
+  // "RULE-SET,Zhihu,知乎",
   "RULE-SET,OpenAI,OpenAI",
   "RULE-SET,Google,Google",
   'RULE-SET,GitHub,GitHub',
@@ -956,14 +956,14 @@ function main(config) {
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/Paypal.png"
     },
-    {
-      ...groupBaseOption,
-      "name": "知乎",
-      "type": "select",
-      "proxies": ["⬆︎ 直连", "❌️ 拦截", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/zhihu.png"
-    },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "知乎",
+    //   "type": "select",
+    //   "proxies": ["⬆︎ 直连", "❌️ 拦截", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/zhihu.png"
+    // },
     {
       ...groupBaseOption,
       "name": "微博",
