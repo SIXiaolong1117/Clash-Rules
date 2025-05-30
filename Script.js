@@ -534,6 +534,7 @@ const ruleProviders = {
 };
 // 规则
 const rules = [
+  'DOMAIN-SUFFIX,zhipin.com,DIRECT',  // BOSS直聘
   // 高优先
   'RULE-SET,Privacy,🛡️ 隐私保护',
   'RULE-SET,AdAds,🚫 广告过滤',
@@ -546,8 +547,8 @@ const rules = [
   'PROCESS-NAME,AfterFX.exe.exe,Adobe',
   'PROCESS-NAME,Acrobat.exe,Adobe',
   // 'PROCESS-NAME,ONCE_HUMAN.exe,七日世界', // 七日世界国际服游戏代理。下载资源时开直连，不下资源需要挂代理才能进国际服。
-  'PROCESS-NAME,mp24-cod.exe,使命召唤',
-  'PROCESS-NAME,cod.exe,使命召唤',
+  // 'PROCESS-NAME,mp24-cod.exe,使命召唤',
+  // 'PROCESS-NAME,cod.exe,使命召唤',
   "RULE-SET,GameDownload,游戏下载",
   "RULE-SET,GameDownloadCN,游戏下载(中国)",
   'RULE-SET,Download,各种下载器(例如BT下载)',
@@ -574,10 +575,10 @@ const rules = [
   "DOMAIN-SUFFIX,getgrass.io,☑️ 节点选择",
   'DOMAIN-SUFFIX,hassbian.com,⬆︎ 直连',
   'DOMAIN-SUFFIX,v2ex.com,V2EX',
-  'PROCESS-NAME,aces.exe,战争雷霆',
+  // 'PROCESS-NAME,aces.exe,战争雷霆',
   'PROCESS-NAME,reverse1999.exe,重返未来1999',
-  'PROCESS-NAME,Diablo IV Launcher.exe,暗黑破坏神4',
-  'PROCESS-NAME,Diablo IV.exe,暗黑破坏神4',
+  // 'PROCESS-NAME,Diablo IV Launcher.exe,暗黑破坏神4',
+  // 'PROCESS-NAME,Diablo IV.exe,暗黑破坏神4',
   // 无限暖暖
   'PROCESS-NAME,InfinityNikki.exe,无限暖暖',
   'PROCESS-NAME,X6Game-Win64-Shipping.exe,无限暖暖',
@@ -592,12 +593,12 @@ const rules = [
   // 'PROCESS-NAME,ffxivupdater64.exe,最终幻想14',
   // 'PROCESS-NAME,ffxiv_dx11.exe,最终幻想14',
   // 梦幻之星
-  // 'PROCESS-NAME,pso2.exe,梦幻之星 Online2 New Genesis',
-  // 'PROCESS-NAME,pso2download.exe,梦幻之星 Online2 New Genesis',
-  // 'PROCESS-NAME,pso2launcher.exe,梦幻之星 Online2 New Genesis',
-  // 'PROCESS-NAME,pso2predownload.exe,梦幻之星 Online2 New Genesis',
-  // 'PROCESS-NAME,pso2restart.exe,梦幻之星 Online2 New Genesis',
-  // 'PROCESS-NAME,pso2updater.exe,梦幻之星 Online2 New Genesis',
+  'PROCESS-NAME,pso2.exe,梦幻之星 Online2 New Genesis',
+  'PROCESS-NAME,pso2download.exe,梦幻之星 Online2 New Genesis',
+  'PROCESS-NAME,pso2launcher.exe,梦幻之星 Online2 New Genesis',
+  'PROCESS-NAME,pso2predownload.exe,梦幻之星 Online2 New Genesis',
+  'PROCESS-NAME,pso2restart.exe,梦幻之星 Online2 New Genesis',
+  'PROCESS-NAME,pso2updater.exe,梦幻之星 Online2 New Genesis',
   // EVE Online
   'PROCESS-NAME,exefile.exe,EVE Online',
   // SIXiaolong1117 规则集
@@ -631,7 +632,7 @@ const rules = [
   'RULE-SET,Weibo,微博',
   // 'RULE-SET,Baidu,百度',
   // 'RULE-SET,BaiduTieba,百度贴吧',
-  'RULE-SET,RedNote,小红书',
+  // 'RULE-SET,RedNote,小红书',
   // 'RULE-SET,OKX,加密货币交易所',
   // 'RULE-SET,Binance,加密货币交易所',
   // 'RULE-SET,Wikimedia,Wikipedia',
@@ -988,14 +989,14 @@ function main(config) {
     //   "include-all": true,
     //   "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/baidu.png"
     // },
-    {
-      ...groupBaseOption,
-      "name": "小红书",
-      "type": "select",
-      "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/Xiaohongshu.png"
-    },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "小红书",
+    //   "type": "select",
+    //   "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://clash-logo.sixiaolong.win/Xiaohongshu.png"
+    // },
     {
       ...groupBaseOption,
       "name": "V2EX",
@@ -1176,7 +1177,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "HoYoverse",
       "type": "select",
-      "proxies": ["🇯🇵 日本优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "proxies": ["🇯🇵 日本负载均衡(散列)", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选", "🇭🇰 香港负载均衡(散列)", "🇺🇸 美国负载均衡(散列)", "🇯🇵 日本负载均衡(散列)", "🇨🇳 台湾负载均衡(散列)", "🇸🇬 新加坡负载均衡(散列)"],
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Color/mihoyo.png"
     },
@@ -1192,7 +1193,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "无限暖暖",
       "type": "select",
-      "proxies": ["🇯🇵 日本优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "proxies": ["🇯🇵 日本负载均衡(散列)", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选", "🇭🇰 香港负载均衡(散列)", "🇺🇸 美国负载均衡(散列)", "🇯🇵 日本负载均衡(散列)", "🇨🇳 台湾负载均衡(散列)", "🇸🇬 新加坡负载均衡(散列)"],
       "include-all": true,
       "icon": "https://clash-logo.sixiaolong.win/InfinityNikki.png"
     },
@@ -1212,14 +1213,14 @@ function main(config) {
     //   "include-all": true,
     //   "icon": "https://clash-logo.sixiaolong.win/FF14.png"
     // },
-    // {
-    //   ...groupBaseOption,
-    //   "name": "梦幻之星 Online2 New Genesis",
-    //   "type": "select",
-    //   "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-    //   "include-all": true,
-    //   "icon": "https://clash-logo.sixiaolong.win/PSO2NGS.png"
-    // },    
+    {
+      ...groupBaseOption,
+      "name": "梦幻之星 Online2 New Genesis",
+      "type": "select",
+      "proxies": ["⬆︎ 直连", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+      "include-all": true,
+      "icon": "https://clash-logo.sixiaolong.win/PSO2NGS.png"
+    },    
     {
       ...groupBaseOption,
       "name": "EVE Online",
@@ -1228,38 +1229,38 @@ function main(config) {
       "include-all": true,
       "icon": "https://clash-logo.sixiaolong.win/EVE.png"
     },
-    {
-      ...groupBaseOption,
-      "name": "战争雷霆",
-      "type": "select",
-      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/WT.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "使命召唤",
-      "type": "select",
-      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/COD.png"
-    },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "战争雷霆",
+    //   "type": "select",
+    //   "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://clash-logo.sixiaolong.win/WT.png"
+    // },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "使命召唤",
+    //   "type": "select",
+    //   "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://clash-logo.sixiaolong.win/COD.png"
+    // },
     {
       ...groupBaseOption,
       "name": "重返未来1999",
       "type": "select",
-      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港负载均衡(散列)", "🇺🇸 美国优选", "🇺🇸 美国负载均衡(散列)", "🇯🇵 日本优选", "🇯🇵 日本负载均衡(散列)", "🇨🇳 台湾优选", "🇨🇳 台湾负载均衡(散列)", "🇸🇬 新加坡优选", "🇸🇬 新加坡负载均衡(散列)"],
+      "proxies": ["🇭🇰 香港负载均衡(散列)", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇭🇰 香港优选", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选", "🇭🇰 香港负载均衡(散列)", "🇺🇸 美国负载均衡(散列)", "🇯🇵 日本负载均衡(散列)", "🇨🇳 台湾负载均衡(散列)", "🇸🇬 新加坡负载均衡(散列)"],
       "include-all": true,
       "icon": "https://clash-logo.sixiaolong.win/1999.png"
     },
-    {
-      ...groupBaseOption,
-      "name": "暗黑破坏神4",
-      "type": "select",
-      "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
-      "include-all": true,
-      "icon": "https://clash-logo.sixiaolong.win/1999.png"
-    },
+    // {
+    //   ...groupBaseOption,
+    //   "name": "暗黑破坏神4",
+    //   "type": "select",
+    //   "proxies": ["🇭🇰 香港优选", "☑️ 节点选择", "⚡ 延迟选优", "🚑 故障转移", "负载均衡(散列)", "负载均衡(轮询)", "⬆︎ 直连", "🇺🇸 美国优选", "🇯🇵 日本优选", "🇨🇳 台湾优选", "🇸🇬 新加坡优选"],
+    //   "include-all": true,
+    //   "icon": "https://clash-logo.sixiaolong.win/1999.png"
+    // },
     {
       ...groupBaseOption,
       "name": "各种下载器(例如BT下载)",
